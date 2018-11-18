@@ -118,7 +118,7 @@ img {
 }
 
 .button {
-  background-color: #e47210;
+  background-color: #d37d4a;
   border-radius: .5em;
   color: white;
   padding: .5em 1em;
@@ -129,6 +129,11 @@ img {
   color: white;
   text-decoration: none;
 }
+
+.button:hover {
+  background-color: #2f749f;
+}
+
 
 /* Header Section*/
 header {
@@ -153,7 +158,7 @@ header .main-nav {
 
 header ul {
   list-style-type: none;
-
+  font-size: 1.3em;
 }
 
 header li {
@@ -163,7 +168,7 @@ header li {
 
 header a {
   text-decoration: none;
-  color: #2172ff;
+  color: #2f749f;
 }
 
 /* Main content section */
@@ -174,14 +179,17 @@ h1 {
 
 /* Featured Section */
 .featured-container {
-  background-color: #2172ff;
+  background-color: #2f749f;
   color: white;
   margin: 0;
-  padding: 1em;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+
 }
 
-.featured-container h2 {
-  margin-top: 0;
+.featured-container h2, .featured-container h3, .featured-container h4 {
+  margin: 0;
 }
 
 .featured-container ul {
@@ -189,18 +197,11 @@ h1 {
   padding-left: 0;
 }
 
-.featured-container ul ul {
-  padding-left: 1em;
-}
-
-.featured-container .button {
-  margin: 0 auto;
-}
-
 .featured-pet {
-  margin: 1em 1em 4em 1em;
+  margin: 1em;
   padding: .5em;
-
+  flex: 1;
+  position: relative;
 }
 
 .featuredpet-image {
@@ -208,8 +209,20 @@ h1 {
   padding: 0 0 1em 0;
 }
 
-.featuredpet-description .button {
-  margin: auto;
+.featured-pet > .button {
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.featured-pet .button:hover {
+  background-color: white;
+  color: #d37d4a;
+}
+
+.featured-pet > .button a:hover {
+  color: #d37d4a;
 }
 
 
@@ -217,7 +230,7 @@ h1 {
 
 /* Adoption Plug Section*/
 .cta-section {
-  height: 16em;
+  height: 20em;
   position: relative;
   text-align: center;
 }
@@ -231,18 +244,25 @@ h1 {
 }
 
 .cta-section h2 {
+  margin: .25em;
+  font-size: 1.8em;
+}
+
+.cta-section h3 {
   margin-bottom: 1.5em;
-  font-size: 1.7em;
+  font-size: 1.2em;
+
 }
 
 .cta-section .button {
   font-size: 1.2em;
+  text-decoration: none;
 }
 
 
 /*Footer Section*/
 footer {
-  background-color: #2172ff;
+  background-color: #2f749f;
   color: white;
   padding: 3em 3em .5em 3em;
   text-align: center;
@@ -256,6 +276,10 @@ footer h3 {
 
 footer a {
   color: white;
+}
+
+footer a:hover {
+  color: #d37d4a;
 }
 
 footer .social-icons {
