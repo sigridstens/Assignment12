@@ -244,9 +244,8 @@ h1 {
 footer {
   background-color: #2172ff;
   color: white;
-  padding: 3em;
+  padding: 3em 3em .5em 3em;
   text-align: center;
-
 }
 
 footer h3 {
@@ -255,8 +254,13 @@ footer h3 {
   margin: 0;
 }
 
+footer a {
+  color: white;
+}
+
 footer .social-icons {
   margin: 2em 0;
+
 }
 
 footer .icon {
