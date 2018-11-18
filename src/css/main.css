@@ -244,12 +244,30 @@ h1 {
 footer {
   background-color: #2172ff;
   color: white;
+  padding: 3em;
+  text-align: center;
+
+}
+
+footer h3 {
+  font-size: 1.8em;
+  text-align: left;
+  margin: 0;
+}
+
+footer .social-icons {
+  margin: 2em 0;
+}
+
+footer .icon {
   padding: 1em;
+  font-size: 3em;
+
 }
 
 .footer-container {
   display: flex;
-  text-align: center;
+  justify-content: space-between;
 }
 
 footer ul {
