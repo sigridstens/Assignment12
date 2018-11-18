@@ -105,17 +105,31 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  letter-spacing: .04em;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: "Arial Rounded MT Bold", sans-serif;
-
+  letter-spacing: .07em;
 }
 
+em {
+  font-style: normal;
+  color: #d37d4a;
+}
 
 img {
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d37d4a;
+}
+
 
 .button {
   background-color: #d37d4a;
@@ -123,6 +137,7 @@ img {
   color: white;
   padding: .5em 1em;
   margin: 1em;
+  font-size: 1.3em;
 }
 
 .button a {
@@ -171,21 +186,23 @@ header a {
   color: #2f749f;
 }
 
-/* Main content section */
-h1 {
-  margin: 2em 1em 1em 1em;
+/* Featured Section */
+.featured-section {
+  background-color: #2f749f;
+  color: white;
+  padding: 2em;
+  margin: 0;
+}
+
+.featured-section h1 {
+  margin: 1em;
+  font-size: 2.5em;
 }
 
 
-/* Featured Section */
 .featured-container {
-  background-color: #2f749f;
-  color: white;
-  margin: 0;
-  padding: 2em;
   display: flex;
   flex-direction: row;
-
 }
 
 .featured-container h2, .featured-container h3, .featured-container h4 {
@@ -195,37 +212,50 @@ h1 {
 .featured-container ul {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
 }
 
 .featured-pet {
   margin: 1em;
   padding: .5em;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overlay-container {
   position: relative;
-}
-
-.featuredpet-image {
-  float: right;
-  padding: 0 0 1em 0;
-}
-
-.featured-pet > .button {
+  height: fit-content;
   width: fit-content;
+}
+
+.overlay {
   position: absolute;
+  width: 100%;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  padding: 1em;
+  background-image: linear-gradient(to top, #2f749f, rgba(47, 116, 159, 0.21));
+  color: #ffffff;
+}
+
+.featured-pet .button {
+  width: fit-content;
+  text-decoration: none;
+  margin: auto;
 }
 .featured-pet .button:hover {
   background-color: white;
   color: #d37d4a;
 }
 
-.featured-pet > .button a:hover {
+.featured-pet .button a:hover {
   color: #d37d4a;
 }
 
-
+.featuredpet-description {
+  margin: .75em 1em;
+}
 
 
 /* Adoption Plug Section*/
@@ -255,9 +285,14 @@ h1 {
 }
 
 .cta-section .button {
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
 }
+
+.cta-section .button:hover {
+  color: white;
+}
+
 
 
 /*Footer Section*/
@@ -278,9 +313,6 @@ footer a {
   color: white;
 }
 
-footer a:hover {
-  color: #d37d4a;
-}
 
 footer .social-icons {
   margin: 2em 0;
