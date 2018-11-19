@@ -137,7 +137,6 @@ a:hover {
   color: white;
   padding: .5em 1em;
   margin: 1em;
-  font-size: 1.3em;
 }
 
 .button a {
@@ -165,20 +164,22 @@ header .logo {
 }
 
 header .main-nav {
-  flex: 2;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  max-width: 75%;
 }
 
 header ul {
   list-style-type: none;
   font-size: 1.3em;
+  text-align: right;
 }
 
 header li {
   display: inline;
-  padding: 1em 2em;
+  padding: 1em .5em;
+  line-height: 2em;
 }
 
 header a {
@@ -243,6 +244,7 @@ header a {
   width: fit-content;
   text-decoration: none;
   margin: auto;
+  font-size: 1.3em;
 }
 .featured-pet .button:hover {
   background-color: white;
@@ -256,6 +258,64 @@ header a {
 .featuredpet-description {
   margin: .75em 1em;
 }
+
+
+/* Contact Modal */
+aside {
+  display: none;
+  text-align: center;
+  background-color: #d37d4a;
+  color: white;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  min-width: 450px;
+  height: fit-content;
+  margin: auto;
+  padding: 2em;
+  z-index: 10;
+}
+
+.modal .formrow {
+  margin: 1em;
+}
+
+.modal label {
+  font-size: 1.2em;
+}
+
+.modal input[type=text], .modal input[type=email] {
+  border: none;
+  width: 70%;
+  height: 2.5em;
+}
+
+.modal input[type=tel] {
+  border: none;
+  width: 53%;
+  height: 2.5em;
+}
+
+.modal input[type=submit]{
+  color: white;
+  background-color: #2f749f;
+  font-size: 1.5em;
+  border: none;
+  padding: .5em 1em;
+  margin: 1em 0 .5em 0;
+}
+
+.modal p.cancel {
+   margin: 0;
+   text-decoration: underline;
+ }
+
+.modal .cancel:hover {
+  color: #2f749f;
+}
+
 
 
 /* Adoption Plug Section*/
@@ -343,6 +403,40 @@ footer li {
 
 
 
+@media screen and (max-width: 760px) {
+  header {
+    align-items: center;
+  }
+
+  header .logo {
+    flex-basis: 50%;
+  }
+
+  header li {
+    display: block;
+    padding: .25em;
+    line-height: 1.5;
+
+  }
+
+  header li.button {
+    display: block;
+    margin: 0;
+    width: fit-content;
+  }
+
+  header ul {
+    margin: 0;
+  }
+
+
+  .featured-container {
+    flex-direction: column;
+  }
+
+
+
+}
 
 
 
